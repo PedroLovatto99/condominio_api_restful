@@ -17,6 +17,7 @@ class Apartamento(models.Model):
 
 
 class Residente(models.Model):
+    nome = models.CharField(max_length=200, blank=True, null=True)
     apartamento = models.ForeignKey(Apartamento, on_delete=models.PROTECT)
     cpf_cnpj = models.CharField(
         verbose_name="CPF/CNPJ", max_length=18, unique=True)

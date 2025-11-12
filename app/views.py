@@ -14,7 +14,7 @@ class BlocosRetrieverUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = BlocoSerializer
 
 
-class ApartamentosListCreate(generics.ListAPIView):
+class ApartamentosListCreate(generics.ListCreateAPIView):
     queryset = Apartamento.objects.all()
     serializer_class = ApartamentoSerializer
 
