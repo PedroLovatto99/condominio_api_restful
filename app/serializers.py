@@ -2,7 +2,7 @@ from .models import Bloco, Apartamento, Residente
 from rest_framework import serializers
 
 
-class BlocoSerializer(serializers.Serializer):
+class BlocoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Bloco
@@ -10,7 +10,7 @@ class BlocoSerializer(serializers.Serializer):
         read_only_fields = ['id']
 
 
-class ApartamentoSerializer(serializers.Serializer):
+class ApartamentoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Apartamento
@@ -18,7 +18,7 @@ class ApartamentoSerializer(serializers.Serializer):
         read_only_fields = ['id']
 
 
-class ResidenteSerializer(serializers.Serializer):
+class ResidenteSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Residente
