@@ -5,14 +5,14 @@ from .serializers import BlocoSerializer, ApartamentoSerializer, ResidenteSerial
 from rest_framework.response import Response
 from rest_framework import status
 from django.views.decorators.cache import cache_page
-
+from django.utils.decorators import method_decorator
 
 class BlocosListCreate(generics.GenericAPIView):
     permission_classes = [IsAuthenticated]
     queryset = Bloco.objects.all()
     serializer_class = BlocoSerializer
 
-    @cache_page(60 * 1)
+    @method_decorator(cache_page(30))
     def get(self, request, *args, **kwargs):
 
         blocos = self.queryset.all()
@@ -39,7 +39,7 @@ class ApartamentosListCreate(generics.GenericAPIView):
     queryset = Apartamento.objects.all()
     serializer_class = ApartamentoSerializer
 
-    @cache_page(60 * 1)
+    @method_decorator(cache_page(30))
     def get(self, request, *args, **kwargs):
 
         apartamentos = self.queryset.all()
@@ -66,7 +66,7 @@ class ResidenteListCreate(generics.GenericAPIView):
     queryset = Residente.objects.all()
     serializer_class = ResidenteSerializer
 
-    @cache_page(60 * 1)
+    @method_decorator(cache_page(30))
     def get(self, request, *args, **kwargs):
 
         residentes = self.queryset.all()

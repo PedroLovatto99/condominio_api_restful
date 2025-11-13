@@ -57,7 +57,7 @@ REST_FRAMEWORK = {
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://127.0.0.1:6379/1',  # Use the appropriate Redis server URL
+        "LOCATION": f"redis://{os.environ.get('REDIS_HOST', 'redis')}:6379/1",
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
         }
@@ -96,14 +96,14 @@ WSGI_APPLICATION = "core.wsgi.application"
 # }
 
 DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.postgresql',
-         'NAME': str(os.getenv('NAME_PG')),
-         'USER': str(os.getenv('USER_PG')),
-         'PASSWORD': str(os.getenv('PASSWORD_PG')),
-         'HOST': str(os.getenv('HOST_PG')),
-         'PORT': str(os.getenv('PORT_PG')),
-     }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME', 'condominiodb'),
+        'USER': os.environ.get('DB_USER', 'condominiouser'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', 'condominiops'),
+        'HOST': os.environ.get('DB_HOST', 'db'), 
+        'PORT': os.environ.get('DB_PORT', '5432'),
+    }
 }
 
 
