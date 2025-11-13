@@ -1,0 +1,40 @@
+services:
+
+  db:
+    image: postgres:14-alpine
+    ports:
+      - 15432:5432
+    environment:
+      POSTGRES_DB: condominiodb
+      POSTGRES_USER: condominiouser
+      POSTGRES_PASSWORD: condominiops
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  
+  condominio-app:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      DB_NAME: condominiodb
+      DB_USER: condominiouser
+      DB_PASSWORD: condominiops
+      DB_HOST: db
+      DB_PORT: 5432
+
+  redis:
+    image:  redis:latest
+    ports:
+     - "6379:6379"
+    volumes:
+     - redis_data:/data
+
+
+volumes:
+  postgres_data:
+  redis_data:
+    driver: local

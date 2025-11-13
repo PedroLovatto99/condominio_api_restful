@@ -5,6 +5,7 @@ from .views import (BlocosListCreate, BlocosRetrieverUpdateDestroy,
 
 
 urlpatterns = [
+
     path("blocos/", BlocosListCreate.as_view(), name="listar_criar_blocos"),
 
     path("blocos/<int:pk>", BlocosRetrieverUpdateDestroy.as_view(),
