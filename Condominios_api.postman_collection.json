@@ -1,0 +1,726 @@
+{
+	"info": {
+		"_postman_id": "46cb627b-b986-4994-9fa6-5c4dcf5bf01c",
+		"name": "Condominios_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35090726"
+	},
+	"item": [
+		{
+			"name": "blocos",
+			"item": [
+				{
+					"name": "blocos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzMDM4NTg0LCJpYXQiOjE3NjMwMzgyODQsImp0aSI6ImQ5NjliZDkyNGU0NzRiMWY5OTYwZWY5ZTdhNjlkZDg0IiwidXNlcl9pZCI6IjEifQ.UzhsqTW2rOA4GYZkcduZk7qQapRkT9NoBMGXY6Dcb1A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/blocos/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"blocos",
+								""
+							]
+						},
+						"description": "Endpoint para listar todos os blocos."
+					},
+					"response": []
+				},
+				{
+					"name": "blocos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzMDM5Mjk3LCJpYXQiOjE3NjMwMzg5OTcsImp0aSI6IjE5MjNkMDhmMjcxZjQ0NDdhNTZiMTA3MWMwMTg3YTZlIiwidXNlcl9pZCI6IjEifQ.YooDkGQopKkD4HzodZElEC5SHT__4UQOEzz-4DXRwqU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"numero\": <numero>\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/blocos/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"blocos",
+								""
+							]
+						},
+						"description": "Endpoint para criar um bloco."
+					},
+					"response": []
+				},
+				{
+					"name": "bloco",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzMDM5Mjk3LCJpYXQiOjE3NjMwMzg5OTcsImp0aSI6IjE5MjNkMDhmMjcxZjQ0NDdhNTZiMTA3MWMwMTg3YTZlIiwidXNlcl9pZCI6IjEifQ.YooDkGQopKkD4HzodZElEC5SHT__4UQOEzz-4DXRwqU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/blocos/<id>",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"blocos",
+								"<id>"
+							]
+						},
+						"description": "Endpoint para listar as informações de um bloco específico."
+					},
+					"response": []
+				},
+				{
+					"name": "bloco",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzMDM5Mjk3LCJpYXQiOjE3NjMwMzg5OTcsImp0aSI6IjE5MjNkMDhmMjcxZjQ0NDdhNTZiMTA3MWMwMTg3YTZlIiwidXNlcl9pZCI6IjEifQ.YooDkGQopKkD4HzodZElEC5SHT__4UQOEzz-4DXRwqU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": <numero>\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/blocos/<id>",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"blocos",
+								"<id>"
+							]
+						},
+						"description": "Endpoint para atualizar a informação de um campo."
+					},
+					"response": []
+				},
+				{
+					"name": "bloco",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzMDM5Mjk3LCJpYXQiOjE3NjMwMzg5OTcsImp0aSI6IjE5MjNkMDhmMjcxZjQ0NDdhNTZiMTA3MWMwMTg3YTZlIiwidXNlcl9pZCI6IjEifQ.YooDkGQopKkD4HzodZElEC5SHT__4UQOEzz-4DXRwqU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": <novo numero>\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/blocos/<id>",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"blocos",
+								"<id>"
+							]
+						},
+						"description": "Endpoint para atualizar a informação de um campo."
+					},
+					"response": []
+				},
+				{
+					"name": "bloco",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzMDM5Mjk3LCJpYXQiOjE3NjMwMzg5OTcsImp0aSI6IjE5MjNkMDhmMjcxZjQ0NDdhNTZiMTA3MWMwMTg3YTZlIiwidXNlcl9pZCI6IjEifQ.YooDkGQopKkD4HzodZElEC5SHT__4UQOEzz-4DXRwqU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/blocos/<id>",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"blocos",
+								"<id>"
+							]
+						},
+						"description": "Endpoint para deletar um bloco."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "apartamentos",
+			"item": [
+				{
+					"name": "apartamentos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartamentos/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartamentos",
+								""
+							]
+						},
+						"description": "Endpoint para listar todos os apartamentos."
+					},
+					"response": []
+				},
+				{
+					"name": "apartamentos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzMDcxMDcwLCJpYXQiOjE3NjMwNzA3NzAsImp0aSI6ImY1ODhiZDMxOTRhNjQ3YzA5YTJiN2FmNTU4NWExNzFkIiwidXNlcl9pZCI6IjEifQ.KCC1BYrXRICCQZfFiHUOcBurHfXgrni6QtChtKRkSss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": <numero>,\r\n    \"bloco\": <numero do bloco>\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartamentos/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartamentos",
+								""
+							]
+						},
+						"description": "Endpoint para criar um novo endpoint."
+					},
+					"response": []
+				},
+				{
+					"name": "apartamento",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzMDM5Mjk3LCJpYXQiOjE3NjMwMzg5OTcsImp0aSI6IjE5MjNkMDhmMjcxZjQ0NDdhNTZiMTA3MWMwMTg3YTZlIiwidXNlcl9pZCI6IjEifQ.YooDkGQopKkD4HzodZElEC5SHT__4UQOEzz-4DXRwqU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartamentos/<id>",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartamentos",
+								"<id>"
+							]
+						},
+						"description": "Endpoint para listar as informações de um apartamento específico."
+					},
+					"response": []
+				},
+				{
+					"name": "apartamento",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzMDM5Mjk3LCJpYXQiOjE3NjMwMzg5OTcsImp0aSI6IjE5MjNkMDhmMjcxZjQ0NDdhNTZiMTA3MWMwMTg3YTZlIiwidXNlcl9pZCI6IjEifQ.YooDkGQopKkD4HzodZElEC5SHT__4UQOEzz-4DXRwqU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": 205\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartamentos/<id>",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartamentos",
+								"<id>"
+							]
+						},
+						"description": "Endpoint para atualizar a informação de um campo."
+					},
+					"response": []
+				},
+				{
+					"name": "apartamento",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzMDM5Mjk3LCJpYXQiOjE3NjMwMzg5OTcsImp0aSI6IjE5MjNkMDhmMjcxZjQ0NDdhNTZiMTA3MWMwMTg3YTZlIiwidXNlcl9pZCI6IjEifQ.YooDkGQopKkD4HzodZElEC5SHT__4UQOEzz-4DXRwqU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": 208,\r\n    \"bloco\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartamentos/<id>",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartamentos",
+								"<id>"
+							]
+						},
+						"description": "Endpoint para atualizar a informação de um campo."
+					},
+					"response": []
+				},
+				{
+					"name": "apartamento",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzMDM5Mjk3LCJpYXQiOjE3NjMwMzg5OTcsImp0aSI6IjE5MjNkMDhmMjcxZjQ0NDdhNTZiMTA3MWMwMTg3YTZlIiwidXNlcl9pZCI6IjEifQ.YooDkGQopKkD4HzodZElEC5SHT__4UQOEzz-4DXRwqU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartamentos/<id>",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartamentos",
+								"<id>"
+							]
+						},
+						"description": "Endpoint para deletar um apartamento."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "residentes",
+			"item": [
+				{
+					"name": "residentes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}/residentes/",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"residentes",
+								""
+							]
+						},
+						"description": "Endpoint para listar todos os residentes."
+					},
+					"response": []
+				},
+				{
+					"name": "residentes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzMDM5NTA5LCJpYXQiOjE3NjMwMzkyMDksImp0aSI6ImFlNzY3MjZmOTIxNjRiYjY5NDVkZjY3NzQ0MzM5YjUzIiwidXNlcl9pZCI6IjEifQ.F2vYaQCXFAT5SfGVyIw2zNKRatxxKdqc_tqQST68VaI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": <nome>,\r\n  \"apartamento\": <apartamento>,\r\n  \"cpf_cnpj\": <cpf_cnpj>,\r\n  \"telefone\": <telefone>,\r\n  \"email\": <email>,\r\n  \"data_inicio\": <data_inicio>,\r\n  \"data_fim\": <data_fim>,\r\n  \"prorrogacao\": <prorrogacao>,\r\n  \"numero_cadastro\": <numero_cadastro>,\r\n  \"valor_aluguel\": <valor_aluguel>,\r\n  \"valor_condominio\": <valor_condominio>,\r\n  \"outros\": <outros valores>\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/residentes/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"residentes",
+								""
+							]
+						},
+						"description": "Endpoint para criar um novo residente."
+					},
+					"response": []
+				},
+				{
+					"name": "residente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzMDM5NTA5LCJpYXQiOjE3NjMwMzkyMDksImp0aSI6ImFlNzY3MjZmOTIxNjRiYjY5NDVkZjY3NzQ0MzM5YjUzIiwidXNlcl9pZCI6IjEifQ.F2vYaQCXFAT5SfGVyIw2zNKRatxxKdqc_tqQST68VaI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/residentes/<id>",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"residentes",
+								"<id>"
+							]
+						},
+						"description": "Endpoint para listar as informações de um residente específico."
+					},
+					"response": []
+				},
+				{
+					"name": "residente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzMDM5NTA5LCJpYXQiOjE3NjMwMzkyMDksImp0aSI6ImFlNzY3MjZmOTIxNjRiYjY5NDVkZjY3NzQ0MzM5YjUzIiwidXNlcl9pZCI6IjEifQ.F2vYaQCXFAT5SfGVyIw2zNKRatxxKdqc_tqQST68VaI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  <campo x>: <nova informação>\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/residentes/<id>",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"residentes",
+								"<id>"
+							]
+						},
+						"description": "Endpoint para atualizar a informação de um campo."
+					},
+					"response": []
+				},
+				{
+					"name": "residente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYzMDM5NTA5LCJpYXQiOjE3NjMwMzkyMDksImp0aSI6ImFlNzY3MjZmOTIxNjRiYjY5NDVkZjY3NzQ0MzM5YjUzIiwidXNlcl9pZCI6IjEifQ.F2vYaQCXFAT5SfGVyIw2zNKRatxxKdqc_tqQST68VaI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": <nome>,\r\n  \"apartamento\": <apartamento>,\r\n  \"cpf_cnpj\": <cpf_cnpj>,\r\n  \"telefone\": <telefone>,\r\n  \"email\": <email>,\r\n  \"data_inicio\": <data_inicio>,\r\n  \"data_fim\": <data_fim>,\r\n  \"prorrogacao\": <prorrogacao>,\r\n  \"numero_cadastro\": <numero_cadastro>,\r\n  \"valor_aluguel\": <valor_aluguel>,\r\n  \"valor_condominio\": <valor_condominio>,\r\n  \"outros\": <outros valores>\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/residentes/<id>",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"residentes",
+								"<id>"
+							]
+						},
+						"description": "Endpoint para atualizar a informação de um campo."
+					},
+					"response": []
+				},
+				{
+					"name": "residente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}/residente/1",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"residente",
+								"1"
+							]
+						},
+						"description": "Endpoint para deletar um residente."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":<username>,\r\n    \"password\": <password>\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/token/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"token",
+						""
+					]
+				},
+				"description": "Endpoint para gerar um token JWT."
+			},
+			"response": []
+		}
+	]
+}
