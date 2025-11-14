@@ -1,6 +1,10 @@
 from pathlib import Path
 from dotenv import load_dotenv
+from datetime import timedelta
 import os
+
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -10,14 +14,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-vz$cgxwm)gaf$y(m!$!m+(j!s&8b4eqrj!g77q!b&h*&wddg%="
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
-load_dotenv()
 
 
 # Application definition
@@ -57,7 +60,7 @@ REST_FRAMEWORK = {
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        "LOCATION": f"redis://{os.environ.get('REDIS_HOST', 'redis')}:6379/1",
+        "LOCATION": f"redis://{os.environ.get('REDIS_HOST', 'localhost')}:6379/1",
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
         }
@@ -101,8 +104,8 @@ DATABASES = {
         'NAME': os.environ.get('DB_NAME', 'condominiodb'),
         'USER': os.environ.get('DB_USER', 'condominiouser'),
         'PASSWORD': os.environ.get('DB_PASSWORD', 'condominiops'),
-        'HOST': os.environ.get('DB_HOST', 'db'), 
-        'PORT': os.environ.get('DB_PORT', '5432'),
+        'HOST': os.environ.get('DB_HOST', 'localhost'), 
+        'PORT': os.environ.get('DB_PORT', '5436'),
     }
 }
 
@@ -147,3 +150,8 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+SIMPLE_JWT = {
+    # Token de acesso dura 60 minutos
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
+}

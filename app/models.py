@@ -5,7 +5,7 @@ class Bloco(models.Model):
     numero = models.PositiveIntegerField(unique=True)
 
     def __str__(self):
-        return self.numero
+        return str(self.numero)
 
 
 class Apartamento(models.Model):
@@ -13,7 +13,7 @@ class Apartamento(models.Model):
     numero = models.PositiveIntegerField()
 
     def __str__(self):
-        return "Apartamento " + str(self.numero) + " - " + str(self.bloco)
+        return "Apartamento " + str(self.numero) + " - " + "Bloco " + str(self.bloco)
 
 
 class Residente(models.Model):

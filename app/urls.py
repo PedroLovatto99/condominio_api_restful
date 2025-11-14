@@ -8,19 +8,19 @@ urlpatterns = [
 
     path("blocos/", BlocosListCreate.as_view(), name="listar_criar_blocos"),
 
-    path("blocos/<int:pk>", BlocosRetrieverUpdateDestroy.as_view(),
-         name="visualizar_atualizar_deletar_bloco"),
+    path("blocos/<int:pk>/", BlocosRetrieverUpdateDestroy.as_view(),
+         name="bloco-detail"),
 
     path("apartamentos/", ApartamentosListCreate.as_view(),
          name="listar_criar_apartamentos"),
 
     path("apartamentos/<int:pk>", ApartamentosRetriverUpdateDestroy.as_view(),
-         name="visualizar_atualizar_deletar_apartamento"),
+         name="apartamento-detail"),
 
     path("residentes/", ResidenteListCreate.as_view(),
          name="listar_criar_residentes"),
 
     path("residentes/<int:pk>", ResidenteRetrieverUpdateDestroy.as_view(),
-         name="visualizar_atualizar_deletar_residente"),
+         name="residente-detail"),
 
 ]

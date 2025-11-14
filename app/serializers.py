@@ -5,11 +5,10 @@ from rest_framework import serializers
 class BlocoSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Bloco
-        fields = "__all__"
-        read_only_fields = ['id']
-
-
+            model = Bloco
+            fields = "__all__"
+            read_only_fields = ['id']
+            
 class ApartamentoSerializer(serializers.ModelSerializer):
 
     class Meta:
