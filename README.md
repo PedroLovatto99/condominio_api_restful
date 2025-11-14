@@ -1,32 +1,32 @@
 # API de Gerenciamento de Condomínios
 
-Esta é uma API RESTful desenvolvida com Django e Django REST Framework para gerenciar informações de um condomínio, incluindo blocos, apartamentos e residentes. O principal objetivo da realização desse projeto foi colocar em prática o estudo realizado sobre APIs RESTful, caso tenha interesse, eu criei no Notion uma página detalhando a arquitetura REST, explicando seus príncipios, vantagens, entre outras coisas.
+Esta é uma API RESTful desenvolvida com Django e Django REST Framework para gerenciar informações de um condomínio, incluindo blocos, apartamentos e residentes. O principal objetivo da realização desse projeto foi colocar em prática o estudo realizado sobre APIs RESTful, caso tenha interesse, eu criei no Notion uma página detalhando a arquitetura REST, explicando seus príncipios, vantagens, entre outras coisas. 
 
 Link: https://www.notion.so/API-Rest-265bb6634ba980139030cbd7d3b9121e?source=copy_link
 
 ## Funcionalidades
 
-- Autenticação de usuário via JWT (JSON Web Token).
-- Operações CRUD (Criar, Ler, Atualizar, Deletar) para os seguintes recursos:
-  - Blocos
-  - Apartamentos
-  - Residentes
-- Cache implementado com Redis para otimizar o desempenho das consultas de listagem.
-- Containerização com Docker facilitar o setup e o deploy.
+*   Autenticação de usuário via JWT (JSON Web Token).
+*   Operações CRUD (Criar, Ler, Atualizar, Deletar) para os seguintes recursos:
+    *   Blocos
+    *   Apartamentos
+    *   Residentes
+*   Cache implementado com Redis para otimizar o desempenho das consultas de listagem.
+*   Containerização com Docker facilitar o setup e o deploy.
 
 ## Tecnologias Utilizadas
 
-- **Backend:**
-  - Python 3.11
-  - Django
-  - Django REST Framework
-  - Simple JWT for DRF
-- **Banco de Dados:**
-  - PostgreSQL
-- **Cache:**
-  - Redis
-- **Containerização:**
-  - Docker
+*   **Backend:**
+    *   Python 3.11
+    *   Django
+    *   Django REST Framework
+    *   Simple JWT for DRF
+*   **Banco de Dados:**
+    *   PostgreSQL
+*   **Cache:**
+    *   Redis
+*   **Containerização:**
+    *   Docker
 
 ## Instalação e Execução
 
@@ -34,10 +34,10 @@ Siga os passos abaixo para configurar e executar o projeto em seu ambiente de de
 
 ### Pré-requisitos
 
-- Python 3.11+
-- PostgreSQL
-- Redis
-- Git
+*   Python 3.11+
+*   PostgreSQL
+*   Redis
+*   Git
 
 ### 1. Clone o repositório
 
@@ -104,7 +104,7 @@ Alternativamente, você pode executar o projeto usando Docker e Docker Compose.
 
 ### Pré-requisitos
 
-- Docker
+*   Docker
 
 ### 1. Configure o `.env`
 
@@ -128,41 +128,43 @@ Todas as rotas abaixo requerem autenticação. O token JWT deve ser enviado no c
 
 Arquivo do postman com a estrutura de testes: [Abrir Coleção do Postman (JSON)](./Condominios_api.postman_collection.json)
 
+
 ### Autenticação
 
-| Método | Endpoint  | Descrição                                                                                                                 |
-| :----- | :-------- | :------------------------------------------------------------------------------------------------------------------------ |
+| Método | Endpoint      | Descrição                                                              |
+| :----- | :------------ | :--------------------------------------------------------------------- |
 | `POST` | `/token/` | Obtém um token de acesso e um de atualização. Corpo da requisição: `{"username": "seu_usuario", "password": "sua_senha"}` |
 
 ### Blocos
 
-| Método   | Endpoint            | Descrição                                              |
-| :------- | :------------------ | :----------------------------------------------------- | --- |
-| `GET`    | `/api/blocos/`      | Lista todos os blocos (com cache).                     |
-| `POST`   | `/api/blocos/`      | Cria um novo bloco.                                    |
-| `GET`    | `/api/blocos/<id>/` | Detalha um bloco específico.                           |
-| `PUT`    | `/api/blocos/<id>/` | Atualiza um bloco (necessário passar todos os campos). | .   |
-| `PATCH`  | `/api/blocos/<id>/` | Atualiza um bloco.                                     |
-| `DELETE` | `/api/blocos/<id>/` | Deleta um bloco.                                       |
+| Método | Endpoint          | Descrição                        | 
+| :----- | :---------------- | :------------------------------- |
+| `GET`  | `/api/blocos/`    | Lista todos os blocos (com cache). |
+| `POST` | `/api/blocos/`    | Cria um novo bloco.              |  
+| `GET`  | `/api/blocos/<id>/` | Detalha um bloco específico.     |
+| `PUT`  | `/api/blocos/<id>/` | Atualiza um bloco  (necessário passar todos os campos).              |.               |
+| `PATCH`  | `/api/blocos/<id>/` | Atualiza um bloco.               |
+| `DELETE`| `/api/blocos/<id>/` | Deleta um bloco.                 |
+
 
 ### Apartamentos
 
-| Método   | Endpoint                  | Descrição                                                    |
-| :------- | :------------------------ | :----------------------------------------------------------- | --- |
-| `GET`    | `/api/apartamentos/`      | Lista todos os apartamentos (com cache).                     |
-| `POST`   | `/api/apartamentos/`      | Cria um novo apartamento.                                    |
-| `GET`    | `/api/apartamentos/<id>/` | Detalha um apartamento específico.                           |
-| `PUT`    | `/api/apartamentos/<id>/` | Atualiza um apartamento (necessário passar todos os campos). | .   |
-| `PATCH`  | `/api/apartamentos/<id>/` | Atualiza um apartamento.                                     |
-| `DELETE` | `/api/apartamentos/<id>/` | Deleta um apartamento.                                       |
+| Método | Endpoint             | Descrição                             |
+| :----- | :------------------- | :------------------------------------ |
+| `GET`  | `/api/apartamentos/` | Lista todos os apartamentos (com cache).|
+| `POST` | `/api/apartamentos/` | Cria um novo apartamento.             |
+| `GET`  | `/api/apartamentos/<id>/`| Detalha um apartamento específico.    |
+| `PUT`  | `/api/apartamentos/<id>/`| Atualiza um apartamento  (necessário passar todos os campos).              |.              |
+| `PATCH`  | `/api/apartamentos/<id>/`| Atualiza um apartamento.              |
+| `DELETE`| `/api/apartamentos/<id>/`| Deleta um apartamento.                |
 
 ### Residentes
 
-| Método   | Endpoint                | Descrição                                                  |
-| :------- | :---------------------- | :--------------------------------------------------------- |
-| `GET`    | `/api/residentes/`      | Lista todos os residentes (com cache).                     |
-| `POST`   | `/api/residentes/`      | Cria um novo residente.                                    |
-| `GET`    | `/api/residentes/<id>/` | Detalha um residente específico.                           |
-| `PUT`    | `/api/residentes/<id>/` | Atualiza um residente (necessário passar todos os campos). |
-| `PATCH`  | `/api/residentes/<id>/` | Atualiza um residente.                                     |
-| `DELETE` | `/api/residentes/<id>/` | Deleta um residente.                                       |
+| Método | Endpoint            | Descrição                           |
+| :----- | :------------------ | :---------------------------------- |
+| `GET`  | `/api/residentes/`  | Lista todos os residentes (com cache).|
+| `POST` | `/api/residentes/`  | Cria um novo residente.             |
+| `GET`  | `/api/residentes/<id>/` | Detalha um residente específico.    |
+| `PUT`  | `/api/residentes/<id>/` | Atualiza um residente (necessário passar todos os campos).              |
+| `PATCH`  | `/api/residentes/<id>/` | Atualiza um residente.              |
+| `DELETE`| `/api/residentes/<id>/` | Deleta um residente.                |
