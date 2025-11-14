@@ -126,7 +126,7 @@ Todas as rotas abaixo requerem autenticação. O token JWT deve ser enviado no c
 
 `Authorization: Bearer <seu_token_de_acesso>`
 
-Arquivo do postman com a estrutura de testes: [Baixar Coleção do Postman (JSON)](./Condominios_api.postman_collection.json)
+Arquivo do postman com a estrutura de testes: [Abrir Coleção do Postman (JSON)](./Condominios_api.postman_collection.json)
 
 ### Autenticação
 
