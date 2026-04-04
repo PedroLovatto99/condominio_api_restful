@@ -21,6 +21,7 @@ Link: https://www.notion.so/API-Rest-265bb6634ba980139030cbd7d3b9121e?source=cop
     *   Django
     *   Django REST Framework
     *   Simple JWT for DRF
+    *   unittest para testes unitários
 *   **Banco de Dados:**
     *   PostgreSQL
 *   **Cache:**
