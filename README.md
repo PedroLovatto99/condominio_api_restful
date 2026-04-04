@@ -98,6 +98,11 @@ python manage.py runserver
 
 A API estará disponível em `http://127.0.0.1:8000/`.
 
+### 8. Rodar testes unitários (opcional)
+```
+python manage.py test
+```
+
 ## Executando com Docker
 
 Alternativamente, você pode executar o projeto usando Docker e Docker Compose.
